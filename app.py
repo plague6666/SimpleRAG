@@ -107,9 +107,3 @@ except KeyboardInterrupt:
     vectorstore.client.close()
     qdrant_client.close()
     st.stop()
-finally:
-    if 'vectorstore' in locals():
-        vectorstore.client.close()
-    if 'qdrant_client' in locals():
-        qdrant_client.close()
-    st.sidebar.success("Ready for new questions!")
